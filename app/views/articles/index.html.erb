@@ -1,0 +1,11 @@
+<div class="navbar">
+  <h4><%= link_to "WikiRick Morty", articles_path %></h4>
+  <h4><%= link_to "New random Character", new_article_path %></h4>
+</div>  
+
+<div class="container">
+  <% @articles.each do |a| %>
+    <h4><%= link_to a.title, article_path(a) %></h4>
+    <p><%= a.content %></p>
+  <% end %>
+</div>
